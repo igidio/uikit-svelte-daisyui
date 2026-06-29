@@ -71,6 +71,24 @@ export const button_sizes: Record<UiButtonSize, string> = {
 export type UiButtonVariant = 'neutral' | 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error' | 'ghost';
 ```
 
+**Color class maps always go in the properties file**, never as inline ternaries. Use a `Record<string, string>`:
+
+```ts
+// ui-button-properties.ts
+export const button_color_classes: Record<string, string> = {
+  neutral: 'btn-neutral',
+  primary: 'btn-primary',
+  secondary: 'btn-secondary',
+  // ...
+};
+```
+
+Then in the component, a single-line `$derived`:
+
+```ts
+let color_class = $derived(color ? button_color_classes[color] : '');
+```
+
 ### Component Pattern
 
 ```svelte
@@ -253,6 +271,7 @@ When a parent component needs to iterate over **child component instances** pass
 
 ## Naming & Conventions
 
+- **Indentation**: 2 spaces. No tabs.
 - **Variables and constants**: Always use **snake_case** (e.g., `button_sizes`, `is_open`, `selected_value`, `modal_service`). No camelCase for data.
 - **Types/interfaces**: PascalCase (e.g., `UiButtonSize`, `UiPaginationPageItem`).
 - **Prefix**: `Ui` (e.g., `UiButton`, `UiAlert`, `UiModal`) — same as reference project
