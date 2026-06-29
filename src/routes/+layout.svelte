@@ -2,11 +2,12 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import { use_theme } from '$lib/stores/theme.svelte';
+	import UiDrawer from '$lib/ui/ui-drawer/UiDrawer.svelte';
 	import UiSidebar from '$lib/ui/ui-sidebar/UiSidebar.svelte';
 	import UiThemeController from '$lib/ui/ui-themecontroller/UiThemeController.svelte';
 	import UiToast from '$lib/ui/ui-toast/UiToast.svelte';
 
-	let { children } = $props();
+	let { children: page_content } = $props();
 
 	const theme = use_theme();
 	theme.initialize();
@@ -22,14 +23,18 @@
 		<UiThemeController type="toggle" />
 	</header>
 
-	<div class="flex bg-neutral-primary w-full">
-		<UiSidebar class="sticky w-32 md:w-48 top-16 h-[calc(100vh-65px)]" />
-		<main
-			class="p-6 max-w-325 mx-auto h-full w-full gap-4 flex flex-col overflow-x-hidden"
-		>
-			{@render children()}
-		</main>
-	</div>
+	<UiDrawer>
+		{#snippet children()}
+			<div class="flex bg-neutral-primary w-full">
+				<UiSidebar class="sticky w-32 md:w-48 top-16 h-[calc(100vh-65px)]" />
+				<main
+					class="p-6 max-w-325 mx-auto h-full w-full gap-4 flex flex-col overflow-x-hidden"
+				>
+					{@render page_content()}
+				</main>
+			</div>
+		{/snippet}
+	</UiDrawer>
 </div>
 
 <UiToast />
