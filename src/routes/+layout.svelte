@@ -4,6 +4,7 @@
 	import { use_theme } from '$lib/stores/theme.svelte';
 	import UiSidebar from '$lib/ui/ui-sidebar/UiSidebar.svelte';
 	import UiThemeController from '$lib/ui/ui-themecontroller/UiThemeController.svelte';
+	import UiToast from '$lib/ui/ui-toast/UiToast.svelte';
 
 	let { children } = $props();
 
@@ -30,3 +31,5 @@
 		</main>
 	</div>
 </div>
+
+<UiToast />

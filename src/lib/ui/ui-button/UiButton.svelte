@@ -23,7 +23,9 @@
     label = null,
     spin = false,
     block = false,
+    class: className = "",
     children,
+    ...rest
   }: {
     size?: UiButtonSize;
     variant?: UiColors;
@@ -35,8 +37,9 @@
     label?: string | null;
     spin?: boolean;
     block?: boolean;
+    class?: string;
     children?: import("svelte").Snippet;
-  } = $props();
+  } & Record<string, unknown> = $props();
 
   let static_classes = $derived(
     (() => {
@@ -52,7 +55,7 @@
   let variant_class = $derived(variant ? button_variants[variant] : "");
 </script>
 
-<button {disabled} {type} class="{static_classes} {variant_class}">
+<button {disabled} {type} class="{static_classes} {variant_class} {className}" {...rest}>
   {#if children}
     {@render children()}
   {:else if icon || label}
