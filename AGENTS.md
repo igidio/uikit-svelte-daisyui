@@ -136,6 +136,8 @@ For data-driven components, accept an array and render with `{#each}`.
 
 ## Naming & Conventions
 
+- **Variables and constants**: Always use **snake_case** (e.g., `button_sizes`, `is_open`, `selected_value`, `modal_service`). No camelCase for data.
+- **Types/interfaces**: PascalCase (e.g., `UiButtonSize`, `UiPaginationPageItem`).
 - **Prefix**: `Ui` (e.g., `UiButton`, `UiAlert`, `UiModal`) — same as reference project
 - **Files**: `Ui{Component}.svelte`, `ui-{component}-properties.ts`
 - **Sub-components**: `Ui{Component}Item.svelte` (e.g., `UiAccordionItem`, `UiTabsItem`)
