@@ -37,11 +37,9 @@
   <div class="drawer-side">
     <label for="ui-drawer-toggle" aria-label="close sidebar" class="drawer-overlay"></label>
     <div class="bg-base-200 w-60 md:w-80 h-screen overflow-y-auto">
-      {#each [drawer_service.content_component] as Component}
-        {#if Component}
-          <Component />
-        {/if}
-      {/each}
+      {#if drawer_service.content_snippet}
+        {@render drawer_service.content_snippet()}
+      {/if}
     </div>
   </div>
 </div>
