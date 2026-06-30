@@ -311,6 +311,107 @@ export function useModal() {
 - `toast.svelte.ts` — message queue with auto-dismiss, types (info/success/warning/error)
 - `theme.svelte.ts` — light/dark toggle, localStorage persistence, `data-theme` attribute
 
+## Snippet Teleport Pattern (Drawer / Modal)
+
+**Purpose:** Allows a page to declare content inline (via `{#snippet}`) and "teleport" it into a global overlay component (drawer, modal, etc.) — same concept as Angular's `TemplateRef` + `ngTemplateOutlet`.
+
+### 1. Store holds a `Snippet` reference
+
+The store exposes an `open_with_content()` method that accepts a snippet plus config options. The snippet is stored as module-level `$state` and `close()` resets it to `null`.
+
+```ts
+// src/lib/stores/drawer.svelte.ts
+import type { Snippet } from 'svelte';
+
+let is_open = $state(false);
+let content_snippet = $state<Snippet | null>(null);
+
+export function useDrawer() {
+  function open(): void { is_open = true; }
+  function close(): void { is_open = false; content_snippet = null; }
+
+  function open_with_content(config: { snippet: Snippet; side?: 'start' | 'end' }): void {
+    if (config.side !== undefined) side = config.side;
+    content_snippet = config.snippet;
+    open();
+  }
+
+  return {
+    get is_open() { return is_open; },
+    get content_snippet() { return content_snippet; },
+    open, close, open_with_content,
+    // ...
+  };
+}
+```
+
+### 2. Overlay component renders the snippet with `{@render}`
+
+The shell component (`UiDrawer`) reads `content_snippet` from the store and renders it inside the overlay panel using `{@render}`.
+
+```svelte
+<!-- src/lib/ui/ui-drawer/UiDrawer.svelte -->
+<script lang="ts">
+  import { useDrawer } from '$lib/stores/drawer.svelte';
+  let { children } = $props();
+  const drawer_service = useDrawer();
+</script>
+
+<div class="drawer">
+  <input type="checkbox" class="drawer-toggle" checked={drawer_service.is_open} />
+  <div class="drawer-content">
+    {@render children?.()}
+  </div>
+  <div class="drawer-side">
+    <div class="bg-base-200 w-80 h-screen">
+      {#if drawer_service.content_snippet}
+        {@render drawer_service.content_snippet()}
+      {/if}
+    </div>
+  </div>
+</div>
+```
+
+### 3. Page defines snippets and passes them on interaction
+
+Content is declared inline as `{#snippet}` in the page template. When the user clicks a button, the snippet reference is passed to `open_with_content()`.
+
+```svelte
+<!-- src/routes/drawer/+page.svelte -->
+<script lang="ts">
+  import { useDrawer } from '$lib/stores/drawer.svelte';
+  import UiButton from '$lib/ui/ui-button/UiButton.svelte';
+  import DrawerForm from '$lib/ui/ui-drawer/DrawerForm.svelte';
+
+  const drawer_service = useDrawer();
+</script>
+
+{#snippet content_basic()}
+  <ul class="menu">
+    <li><button onclick={() => drawer_service.close()}>Home</button></li>
+  </ul>
+{/snippet}
+
+{#snippet content_form()}
+  <DrawerForm title="Hello">
+    {#snippet children()}
+      <p>Content teleported into the drawer</p>
+    {/snippet}
+  </DrawerForm>
+{/snippet}
+
+<UiButton label="Open" onclick={() => drawer_service.open_with_content({ snippet: content_basic, side: 'start' })} />
+<UiButton label="Open form" onclick={() => drawer_service.open_with_content({ snippet: content_form, side: 'start' })} />
+```
+
+### 4. Key rules
+
+- The store stores a `Snippet` (not a component constructor). This avoids `<svelte:component>` deprecation warnings and keeps the content reactive in its original scope.
+- **Each page owns its snippets.** Snippets have access to the page's local state — no need to pass data through the store.
+- `close()` **must** reset `content_snippet = null` to ensure the old snippet is cleaned up and doesn't flash on next open.
+- For overlays that need a **wrapped layout** (header, body, footer with buttons), create a wrapper component like `DrawerForm.svelte` that receives a `children` snippet prop.
+- This pattern is identical for modal: a `modal.svelte.ts` store with `content_snippet: Snippet | null` and a `UiModal.svelte` that renders it.
+
 ## CSS / Tailwind
 
 - **Tailwind CSS v4** (`@import 'tailwindcss'`) — no `tailwind.config.js`
@@ -370,5 +471,11 @@ accordion, alert, aura, avatar, badge, breadcrumbs, button, calendar, carousel, 
 
 Reference project has shared wrappers in `src/shared/components/`:
 - `sidebar/` — navigation menu with links
-- `drawer-form/DrawerForm.svelte` — reusable drawer content wrapper (title, buttons, scrollable body, async actions)
-- `modal-form/ModalForm.svelte` — reusable modal content wrapper (same as drawer-form)
+- `drawer-form/DrawerForm.svelte` — reusable drawer content wrapper (title + close button header, scrollable body, footer with action buttons, async button support)
+  - Location: `src/lib/ui/ui-drawer/DrawerForm.svelte`
+  - Props: `title`, `closable`, `buttons: DrawerFormButton[]`, `show_footer`, `children` snippet
+- `modal-form/ModalForm.svelte` — reusable modal content wrapper (same structure as drawer-form: header with title + close, scrollable body, footer with buttons, async actions)
+  - Location: `src/lib/ui/ui-modal/ModalForm.svelte`
+  - Props: `title`, `closable`, `buttons: ModalFormButton[]`, `show_footer`, `children` snippet
+  - Button interface (`ModalFormButton`) mirrors `UiButton` props plus an optional `action` callback
+  - Async actions automatically disable all footer buttons while executing

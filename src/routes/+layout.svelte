@@ -3,6 +3,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { use_theme } from '$lib/stores/theme.svelte';
 	import UiDrawer from '$lib/ui/ui-drawer/UiDrawer.svelte';
+	import UiModal from '$lib/ui/ui-modal/UiModal.svelte';
 	import UiSidebar from '$lib/ui/ui-sidebar/UiSidebar.svelte';
 	import UiThemeController from '$lib/ui/ui-themecontroller/UiThemeController.svelte';
 	import UiToast from '$lib/ui/ui-toast/UiToast.svelte';
@@ -37,4 +38,5 @@
 	</UiDrawer>
 </div>
 
+<UiModal />
 <UiToast />
