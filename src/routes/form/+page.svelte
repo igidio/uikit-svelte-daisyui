@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { z } from "zod";
   import UiField from "$lib/ui/ui-field/UiField.svelte";
   import UiInput from "$lib/ui/ui-input/UiInput.svelte";
   import type { InputType } from "$lib/ui/ui-input/ui-input-properties";
@@ -12,20 +13,65 @@
   import UiCheckbox from "$lib/ui/ui-checkbox/UiCheckbox.svelte";
   import UiCalendar from "$lib/ui/ui-calendar/UiCalendar.svelte";
   import UiInputfile from "$lib/ui/ui-inputfile/UiInputfile.svelte";
+  import UiButton from "$lib/ui/ui-button/UiButton.svelte";
   import type { SelectOption } from "$lib/ui/ui-select/ui-select-properties";
   import type { CheckboxOption } from "$lib/ui/ui-checkbox/ui-checkbox-properties";
 
-  // ── Validation helpers ──────────────────────────────────────
-  function required(val: unknown): boolean {
-    if (typeof val === "string") return val.trim().length > 0;
-    if (typeof val === "boolean") return val === true;
-    if (typeof val === "number") return val >= 1;
-    if (Array.isArray(val)) return val.length > 0;
-    return val !== null && val !== undefined && val !== "";
-  }
+  // ── Zod schema ──────────────────────────────────────────────
+  const signup_schema = z
+    .object({
+      username: z
+        .string()
+        .min(1, "Username is required")
+        .min(3, "Username must be at least 3 characters"),
+      email: z
+        .string()
+        .min(1, "Email is required")
+        .email("Email is not valid"),
+      phone_number: z
+        .string()
+        .min(1, "Phone number is required")
+        .regex(/^\+?[\d\s-]{7,15}$/, "Phone number is not valid"),
+      country: z.string().min(1, "Country is required"),
+      bio: z.string().max(500, "Bio cannot exceed 500 characters").default(""),
+      password: z
+        .string()
+        .min(1, "Password is required")
+        .min(6, "Password must be at least 6 characters"),
+      repeat_password: z.string().min(1, "Please repeat your password"),
+      first_name: z
+        .string()
+        .min(1, "First name is required")
+        .max(255, "First name cannot exceed 255 characters"),
+      last_name: z
+        .string()
+        .min(1, "Last name is required")
+        .max(255, "Last name cannot exceed 255 characters"),
+      interests: z.array(z.any()).min(1, "Select at least one interest"),
+      birth_date: z.string().min(1, "Birth date is required"),
+      resume: z
+        .string()
+        .nullable()
+        .refine((v) => v !== null && v !== "", "Resume is required"),
+      gender: z.string().min(1, "Gender is required"),
+      accept_terms: z
+        .boolean()
+        .refine((v) => v === true, "You must accept the terms and conditions"),
+      rating: z.number().min(1, "Rating is required"),
+      age: z
+        .number()
+        .min(18, "You must be at least 18 years old")
+        .max(120, "Age cannot exceed 120"),
+    })
+    .refine((data) => data.password === data.repeat_password, {
+      message: "Passwords do not match",
+      path: ["repeat_password"],
+    });
+
+  type SignupForm = z.infer<typeof signup_schema>;
 
   // ── Form model ──────────────────────────────────────────────
-  let form = $state({
+  let form = $state<SignupForm>({
     username: "",
     email: "",
     phone_number: "",
@@ -64,82 +110,27 @@
     age: false,
   });
 
-  function mark_touched(field: keyof typeof touched) {
+  function mark_touched(field: keyof SignupForm) {
     touched[field] = true;
   }
 
-  // ── Validation rules ────────────────────────────────────────
-  function get_error(field: string): string | null {
-    const v = form[field as keyof typeof form];
-    switch (field) {
-      case "username":
-        if (!required(v)) return "Username is required";
-        if ((v as string).length < 3)
-          return "Username must be at least 3 characters";
-        return null;
-      case "email":
-        if (!required(v)) return "Email is required";
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v as string))
-          return "Email is not valid";
-        return null;
-      case "phone_number":
-        if (!required(v)) return "Phone number is required";
-        if (!/^\+?[\d\s-]{7,15}$/.test(v as string))
-          return "Phone number is not valid";
-        return null;
-      case "country":
-        if (!required(v)) return "Country is required";
-        return null;
-      case "bio":
-        if ((v as string).length > 500)
-          return "Bio cannot exceed 500 characters";
-        return null;
-      case "password":
-        if (!required(v)) return "Password is required";
-        if ((v as string).length < 6)
-          return "Password must be at least 6 characters";
-        return null;
-      case "repeat_password":
-        if (!required(v)) return "Please repeat your password";
-        if (form.password !== form.repeat_password)
-          return "Passwords do not match";
-        return null;
-      case "first_name":
-        if (!required(v)) return "First name is required";
-        if ((v as string).length > 255)
-          return "First name cannot exceed 255 characters";
-        return null;
-      case "last_name":
-        if (!required(v)) return "Last name is required";
-        if ((v as string).length > 255)
-          return "Last name cannot exceed 255 characters";
-        return null;
-      case "interests":
-        if (!required(v)) return "Select at least one interest";
-        return null;
-      case "birth_date":
-        if (!required(v)) return "Birth date is required";
-        return null;
-      case "resume":
-        if (!required(v)) return "Resume is required";
-        return null;
-      case "gender":
-        if (!required(v)) return "Gender is required";
-        return null;
-      case "accept_terms":
-        if ((v as boolean) !== true)
-          return "You must accept the terms and conditions";
-        return null;
-      case "rating":
-        if ((v as number) < 1) return "Rating is required";
-        return null;
-      case "age":
-        if ((v as number) < 18) return "You must be at least 18 years old";
-        if ((v as number) > 120) return "Age cannot exceed 120";
-        return null;
-      default:
-        return null;
+  // ── Field errors (derived from Zod) ─────────────────────────
+  let field_errors = $derived.by(() => {
+    const result = signup_schema.safeParse(form);
+    const errors: Partial<Record<keyof SignupForm, string>> = {};
+    if (!result.success) {
+      for (const issue of result.error.issues) {
+        const path = issue.path[0] as keyof SignupForm;
+        if (path && !errors[path]) {
+          errors[path] = issue.message;
+        }
+      }
     }
+    return errors;
+  });
+
+  function get_error(field: keyof SignupForm): string | null {
+    return field_errors[field] ?? null;
   }
 
   // ── Password visibility ─────────────────────────────────────
@@ -167,7 +158,6 @@
   const interests_options: CheckboxOption[] = [
     { label: "Sports", value: "sports" },
     { label: "Music", value: "music" },
-    { label: "Reading", value: "reading" },
     { label: "Technology", value: "tech" },
   ];
 
@@ -189,17 +179,21 @@
   async function on_submit(event: Event) {
     event.preventDefault();
 
-    for (const key of Object.keys(touched) as (keyof typeof touched)[]) {
+    // Mark all fields as touched on submit attempt
+    for (const key of Object.keys(touched) as (keyof SignupForm)[]) {
       touched[key] = true;
     }
 
-    const fields = Object.keys(form);
-    const has_errors = fields.some((f) => get_error(f) !== null);
-    if (has_errors) return;
+    const result = signup_schema.safeParse(form);
+    if (!result.success) {
+      console.log("Validation errors:", result.error.issues);
+      return;
+    }
 
     is_submitting = true;
+    // Simulate async submission
     await new Promise((resolve) => setTimeout(resolve, 800));
-    console.log("Form submitted:", form);
+    console.log("Form submitted:", result.data);
     is_submitting = false;
   }
 </script>
@@ -315,14 +309,13 @@
                 {/snippet}
                 {#snippet right()}
                   <div class="mt-2">
-                    <button
+                    <UiButton
+                      icon={password_visible ? "eye-off" : "eye"}
+                      size="xs"
+                      variant="ghost"
                       type="button"
-                      class="btn btn-xs btn-ghost"
-                      aria-label="Toggle password visibility"
                       onclick={toggle_password_visibility}
-                    >
-                      {password_visible ? "🙈" : "👁️"}
-                    </button>
+                    />
                   </div>
                 {/snippet}
               </UiField>
@@ -479,18 +472,16 @@
             </UiField>
           </div>
 
-          <button
+          <UiButton
+            variant="primary"
             type="submit"
-            class="btn btn-primary btn-block mt-4"
-            disabled={is_submitting}
+            block={true}
+            spin={is_submitting}
           >
-            {#if is_submitting}
-              <span class="loading loading-spinner"></span>
+            {#snippet children()}
               Register
-            {:else}
-              Register
-            {/if}
-          </button>
+            {/snippet}
+          </UiButton>
         </form>
       </div>
     </div>
