@@ -42,7 +42,6 @@
     Viewer: 'ghost',
   };
 
-  // State
   let sort_state = $state<{ sort_by: string | null; order: 'asc' | 'desc' | null }>({ sort_by: null, order: null });
   let search_value = $state('');
   let current_page = $state(1);
@@ -191,7 +190,6 @@
     sort_state = event;
   }
 
-  // Reset page when search/filter/limit changes
   let prev_search = $state('');
   let prev_limit = $state(0);
   $effect(() => {
@@ -202,7 +200,6 @@
     }
   });
 
-  // Deep-ish watch on active_filters for page reset
   let prev_filters_json = $state('');
   $effect(() => {
     const json = JSON.stringify(active_filters);
@@ -214,7 +211,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Loading state -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Loading state</h2>
     <p class="text-base-content/70 mb-6">
@@ -225,7 +221,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Default table -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Default table</h2>
     <p class="text-base-content/70 mb-6">
@@ -236,7 +231,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Zebra -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Zebra</h2>
     <p class="text-base-content/70 mb-6">
@@ -247,7 +241,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Bordered -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Bordered</h2>
     <p class="text-base-content/70 mb-6">
@@ -258,7 +251,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With expandable rows -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With expandable rows</h2>
     <p class="text-base-content/70 mb-6">
@@ -269,7 +261,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With sorting -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With sorting</h2>
     <p class="text-base-content/70 mb-6">
@@ -280,7 +271,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Table sizes -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Table sizes</h2>
     <p class="text-base-content/70 mb-6">
@@ -312,7 +302,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Table with pin-rows -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Table with pin-rows</h2>
     <p class="text-base-content/70 mb-6">
@@ -325,7 +314,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Empty state -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Empty state</h2>
     <p class="text-base-content/70 mb-6">
@@ -339,7 +327,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With search -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With search</h2>
     <p class="text-base-content/70 mb-6">
@@ -356,7 +343,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With limits -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With limits</h2>
     <p class="text-base-content/70 mb-6">
@@ -371,7 +357,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With filters -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With filters</h2>
     <p class="text-base-content/70 mb-6">
@@ -386,7 +371,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With pagination -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With pagination</h2>
     <p class="text-base-content/70 mb-6">
@@ -415,7 +399,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Full featured -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Full featured</h2>
     <p class="text-base-content/70 mb-6">
@@ -451,7 +434,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With query params support -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With query params support</h2>
     <p class="text-base-content/70 mb-6">

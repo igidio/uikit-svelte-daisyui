@@ -3,7 +3,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic 3D Image Hover -->
   <div>
     <h2 class="text-2xl font-bold mb-2">3D Image Hover Effect</h2>
     <p class="text-base-content/70 mb-6">
@@ -20,7 +19,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- 3D Image wrapped in a link -->
   <div>
     <h2 class="text-2xl font-bold mb-2">3D Image wrapped in a Link</h2>
     <p class="text-base-content/70 mb-6">
@@ -39,7 +37,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Image Gallery with 3D Hover -->
   <div>
     <h2 class="text-2xl font-bold mb-2">3D Image Gallery</h2>
     <p class="text-base-content/70 mb-6">
@@ -63,7 +60,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Hard Shape (no border radius) -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Hard Shape (Square)</h2>
     <p class="text-base-content/70 mb-6">

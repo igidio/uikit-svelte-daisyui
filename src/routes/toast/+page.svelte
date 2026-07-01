@@ -11,7 +11,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Toast -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Basic Toast</h2>
     <p class="text-base-content/70 mb-6">
@@ -27,7 +26,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Multiple Toasts -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Multiple Toasts</h2>
     <p class="text-base-content/70 mb-6">
@@ -53,7 +51,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Positions -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Positions</h2>
     <p class="text-base-content/70 mb-6">

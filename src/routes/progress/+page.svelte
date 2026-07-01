@@ -3,7 +3,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Progress -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Basic Progress</h2>
     <p class="text-base-content/70 mb-6">Default progress bar with a value of 50.</p>
@@ -12,7 +11,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Indeterminate -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Indeterminate</h2>
     <p class="text-base-content/70 mb-6">
@@ -23,7 +21,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Different Values -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Values</h2>
     <p class="text-base-content/70 mb-6">Progress bars at 0, 25, 50, 75, and 100 percent.</p>
@@ -53,7 +50,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Colors -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Colors</h2>
     <p class="text-base-content/70 mb-6">Progress bars in all daisyUI semantic colors.</p>
@@ -99,7 +95,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Colors with Indeterminate -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Indeterminate Colors</h2>
     <p class="text-base-content/70 mb-6">Indeterminate progress bars in different colors.</p>

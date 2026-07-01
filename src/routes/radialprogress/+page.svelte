@@ -7,7 +7,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Radialprogress -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Basic Radialprogress</h2>
     <p class="text-base-content/70 mb-6">Default radial progress at 70%.</p>
@@ -18,7 +17,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Different Values -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Values</h2>
     <p class="text-base-content/70 mb-6">Radial progress at 0, 20, 60, 80, and 100 percent.</p>
@@ -48,7 +46,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Colors -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Colors</h2>
     <p class="text-base-content/70 mb-6">Radial progress in daisyUI semantic colors at 70%.</p>
@@ -64,7 +61,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With Background -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With Background Color</h2>
     <p class="text-base-content/70 mb-6">Radial progress with a neutral background.</p>
@@ -80,7 +76,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Custom Size -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Custom Size</h2>
     <p class="text-base-content/70 mb-6">Radial progress with custom sizes in rem.</p>
@@ -102,7 +97,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Custom Thickness -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Custom Thickness</h2>
     <p class="text-base-content/70 mb-6">Radial progress with custom thickness in rem.</p>

@@ -3,7 +3,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Basic Button</h2>
     <p class="text-base-content/70 mb-6">Default button with neutral color.</p>
@@ -14,7 +13,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Sizes -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Sizes</h2>
     <p class="text-base-content/70 mb-6">Buttons available in xs, sm, md, lg, and xl sizes.</p>
@@ -29,7 +27,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Colors -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Colors</h2>
     <p class="text-base-content/70 mb-6">Use the <code>variant</code> prop to choose a color.</p>
@@ -48,7 +45,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- style_type: Soft -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Soft Style</h2>
     <p class="text-base-content/70 mb-6">Buttons with a soft background using the <code>style_type</code> prop.</p>
@@ -65,7 +61,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- style_type: Outline -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Outline Style</h2>
     <p class="text-base-content/70 mb-6">Buttons with an outline style using the <code>style_type</code> prop.</p>
@@ -82,7 +77,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- style_type: Dash -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Dash Style</h2>
     <p class="text-base-content/70 mb-6">Buttons with a dashed outline using the <code>style_type</code> prop.</p>
@@ -99,7 +93,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Disabled -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Disabled</h2>
     <p class="text-base-content/70 mb-6">Buttons can be disabled via the <code>disabled</code> prop.</p>
@@ -112,7 +105,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Block -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Block</h2>
     <p class="text-base-content/70 mb-6">Buttons can be made into a block-level element using the <code>block</code> prop.</p>
@@ -123,7 +115,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Shapes -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Shapes</h2>
     <p class="text-base-content/70 mb-6">Square and circle shapes with icon-only buttons.</p>
@@ -135,7 +126,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With Icon -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With Icon</h2>
     <p class="text-base-content/70 mb-6">Buttons can display an icon before the text.</p>
@@ -149,7 +139,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Icon Only -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Icon Only</h2>
     <p class="text-base-content/70 mb-6">Buttons with only an icon, no label.</p>
@@ -163,7 +152,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Spin -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Spin</h2>
     <p class="text-base-content/70 mb-6">Buttons can show a loading spinner using the <code>spin</code> prop.</p>

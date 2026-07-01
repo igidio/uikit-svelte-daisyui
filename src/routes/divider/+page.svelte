@@ -3,7 +3,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Default -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Default Divider</h2>
     <p class="text-base-content/70 mb-6">
@@ -18,7 +17,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With Text -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Divider with Text</h2>
     <p class="text-base-content/70 mb-6">
@@ -33,7 +31,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Orientation: Vertical -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Vertical Orientation</h2>
     <p class="text-base-content/70 mb-6">
@@ -49,7 +46,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Orientation: Vertical with Text -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Vertical Divider with Text</h2>
     <p class="text-base-content/70 mb-6">Vertical divider with a label in the middle.</p>
@@ -62,7 +58,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Colors -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Colors</h2>
     <p class="text-base-content/70 mb-6">Dividers support all daisyUI semantic colors.</p>
@@ -112,7 +107,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Positions -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Positions</h2>
     <p class="text-base-content/70 mb-6">
@@ -138,7 +132,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Responsive -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Responsive</h2>
     <p class="text-base-content/70 mb-6">
@@ -155,7 +148,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Combined -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Combined Example</h2>
     <p class="text-base-content/70 mb-6">

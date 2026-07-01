@@ -3,7 +3,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Badge -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Basic Badge</h2>
     <p class="text-base-content/70 mb-6">Default badge with primary color.</p>
@@ -14,7 +13,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Sizes -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Sizes</h2>
     <p class="text-base-content/70 mb-6">Badges available in xs, sm, md, lg, and xl sizes.</p>
@@ -29,7 +27,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Variants -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Variants (Colors)</h2>
     <p class="text-base-content/70 mb-6">Badges come in all daisyUI semantic colors.</p>
@@ -48,7 +45,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Type: Soft -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Soft Style</h2>
     <p class="text-base-content/70 mb-6">
@@ -67,7 +63,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Type: Outline -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Outline Style</h2>
     <p class="text-base-content/70 mb-6">
@@ -86,7 +81,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Type: Dash -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Dash Style</h2>
     <p class="text-base-content/70 mb-6">
@@ -105,7 +99,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With Icon -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With Icon</h2>
     <p class="text-base-content/70 mb-6">Badges can display an icon before the text.</p>
@@ -119,7 +112,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Complex Content (slot) -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Complex Content</h2>
     <p class="text-base-content/70 mb-6">
@@ -157,7 +149,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Empty Badge -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Empty Badge</h2>
     <p class="text-base-content/70 mb-6">A badge with no content (just the dot).</p>

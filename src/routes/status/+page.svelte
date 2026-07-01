@@ -8,7 +8,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Default -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Status</h2>
     <p class="text-base-content/70 mb-6">
@@ -23,7 +22,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Colors -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Status colors</h2>
     <p class="text-base-content/70 mb-6">
@@ -41,7 +39,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Sizes -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Status sizes</h2>
     <p class="text-base-content/70 mb-6">
@@ -74,7 +71,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With labels -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Status with labels</h2>
     <p class="text-base-content/70 mb-6">
@@ -102,7 +98,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- In context -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Status in context</h2>
     <p class="text-base-content/70 mb-6">

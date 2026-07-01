@@ -219,7 +219,6 @@
 {/snippet}
 
 <section class="space-y-12">
-	<!-- Default -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">Default Modal</h2>
 		<p class="text-base-content/70 mb-6">
@@ -237,7 +236,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- Sizes -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">Sizes</h2>
 		<p class="text-base-content/70 mb-6">
@@ -270,7 +268,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- Dynamic backdrop -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">Dynamic Backdrop</h2>
 		<p class="text-base-content/70 mb-6">
@@ -292,7 +289,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- Static backdrop -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">Static Backdrop</h2>
 		<p class="text-base-content/70 mb-6">
@@ -314,7 +310,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- No closable -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">No Closable</h2>
 		<p class="text-base-content/70 mb-6">
@@ -337,7 +332,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- Events -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">Events</h2>
 		<p class="text-base-content/70 mb-6">
@@ -355,7 +349,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- ModalForm with title -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">ModalForm with title</h2>
 		<p class="text-base-content/70 mb-6">
@@ -373,7 +366,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- ModalForm with buttons -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">ModalForm with buttons in footer</h2>
 		<p class="text-base-content/70 mb-6">
@@ -391,7 +383,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- ModalForm with async action -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">ModalForm with async action</h2>
 		<p class="text-base-content/70 mb-6">
@@ -409,7 +400,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- Scrollable ModalForm -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">Scrollable ModalForm</h2>
 		<p class="text-base-content/70 mb-6">
@@ -428,7 +418,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- Custom width -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">Custom Width</h2>
 		<p class="text-base-content/70 mb-6">

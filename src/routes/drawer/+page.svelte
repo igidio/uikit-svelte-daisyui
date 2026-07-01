@@ -105,7 +105,6 @@
 {/snippet}
 
 <section class="space-y-12">
-  <!-- Basic Drawer (start) -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Basic Drawer</h2>
     <p class="text-base-content/70 mb-6">
@@ -123,7 +122,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Drawer from the right (end) -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Drawer from the right (end)</h2>
     <p class="text-base-content/70 mb-6">
@@ -140,7 +138,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- DrawerForm with title -->
   <div>
     <h2 class="text-2xl font-bold mb-2">DrawerForm with title</h2>
     <p class="text-base-content/70 mb-6">
@@ -158,7 +155,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- DrawerForm with footer buttons -->
   <div>
     <h2 class="text-2xl font-bold mb-2">DrawerForm with footer buttons</h2>
     <p class="text-base-content/70 mb-6">
@@ -176,7 +172,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- DrawerForm with async action -->
   <div>
     <h2 class="text-2xl font-bold mb-2">DrawerForm with async action</h2>
     <p class="text-base-content/70 mb-6">
@@ -193,7 +188,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- DrawerForm scrollable -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Scrollable DrawerForm</h2>
     <p class="text-base-content/70 mb-6">

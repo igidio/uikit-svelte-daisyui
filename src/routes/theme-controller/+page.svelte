@@ -4,7 +4,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Theme Controller using a toggle -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Theme Controller using a toggle</h2>
     <p class="text-base-content/70 mb-6">
@@ -15,7 +14,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Theme Controller using a checkbox -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Theme Controller using a checkbox</h2>
     <p class="text-base-content/70 mb-6">
@@ -26,7 +24,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Theme Controller using a swap -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Theme Controller using a swap</h2>
     <p class="text-base-content/70 mb-6">
@@ -37,7 +34,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Theme Controller with icons inside -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Theme Controller with icons inside</h2>
     <p class="text-base-content/70 mb-6">
@@ -48,7 +44,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Toggle with text labels -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Toggle with text labels</h2>
     <p class="text-base-content/70 mb-6">
@@ -63,7 +58,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Toggle with icons on sides -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Toggle with icons on sides</h2>
     <p class="text-base-content/70 mb-6">

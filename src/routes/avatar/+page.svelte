@@ -3,7 +3,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Avatar -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Basic Avatar</h2>
     <p class="text-base-content/70 mb-6">Simple avatar with an image.</p>
@@ -18,7 +17,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Sizes -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Sizes</h2>
     <p class="text-base-content/70 mb-6">Avatars available in xs, sm, md, lg, and xl sizes.</p>
@@ -53,7 +51,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Shapes -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Shapes</h2>
     <p class="text-base-content/70 mb-6">
@@ -101,7 +98,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Presence Indicator -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Presence Indicator</h2>
     <p class="text-base-content/70 mb-6">Shows online/offline status using a colored dot.</p>
@@ -123,7 +119,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With Ring -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With Ring</h2>
     <p class="text-base-content/70 mb-6">Highlight an avatar with a colored ring.</p>
@@ -139,7 +134,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Placeholder -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Placeholder</h2>
     <p class="text-base-content/70 mb-6">
@@ -155,7 +149,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Avatar Group -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Avatar Group</h2>
     <p class="text-base-content/70 mb-6">
@@ -187,7 +180,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Avatar Group with Counter -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Avatar Group with Counter</h2>
     <p class="text-base-content/70 mb-6">Use a placeholder avatar to show additional count.</p>

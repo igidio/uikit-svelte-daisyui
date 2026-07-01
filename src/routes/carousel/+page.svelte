@@ -4,7 +4,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Snap to start (default) -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Snap to Start</h2>
     <p class="text-base-content/70 mb-6">
@@ -81,7 +80,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Snap to center -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Snap to Center</h2>
     <p class="text-base-content/70 mb-6">Items snap to the center of the container.</p>
@@ -156,7 +154,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Snap to end -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Snap to End</h2>
     <p class="text-base-content/70 mb-6">Items snap to the end of the container.</p>
@@ -231,7 +228,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Vertical carousel -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Vertical Carousel</h2>
     <p class="text-base-content/70 mb-6">Carousel with vertical scrolling direction.</p>
@@ -290,7 +286,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Carousel with indicator buttons -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Carousel with Indicator Buttons</h2>
     <p class="text-base-content/70 mb-6">
@@ -341,7 +336,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Carousel with next/prev buttons -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Carousel with Next/Prev Buttons</h2>
     <p class="text-base-content/70 mb-6">

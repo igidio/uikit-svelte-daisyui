@@ -3,7 +3,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Tooltip -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Basic Tooltip</h2>
     <p class="text-base-content/70 mb-6">
@@ -20,7 +19,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With Content -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With Content</h2>
     <p class="text-base-content/70 mb-6">
@@ -40,7 +38,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Positions -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Positions</h2>
     <p class="text-base-content/70 mb-6">
@@ -72,7 +69,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Colors -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Colors</h2>
     <p class="text-base-content/70 mb-6">Tooltips in daisyUI semantic colors.</p>
@@ -127,7 +123,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Combined -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Combined</h2>
     <p class="text-base-content/70 mb-6">

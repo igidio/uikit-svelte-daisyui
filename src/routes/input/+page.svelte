@@ -68,7 +68,6 @@
 <div class="space-y-10">
   <h1 class="text-2xl font-bold">Input Component</h1>
 
-  <!-- Basic demos -->
   <section>
     <h2 class="text-xl font-semibold mb-4">Variants</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -89,7 +88,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Colors showcase -->
   <section>
     <h2 class="text-xl font-semibold mb-4">Colors</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -104,7 +102,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Sizes showcase -->
   <section>
     <h2 class="text-xl font-semibold mb-4">Sizes</h2>
     <div class="flex flex-col gap-4">

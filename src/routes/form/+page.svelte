@@ -17,7 +17,6 @@
   import type { SelectOption } from "$lib/ui/ui-select/ui-select-properties";
   import type { CheckboxOption } from "$lib/ui/ui-checkbox/ui-checkbox-properties";
 
-  // ── Zod schema ──────────────────────────────────────────────
   const signup_schema = z
     .object({
       username: z
@@ -70,7 +69,6 @@
 
   type SignupForm = z.infer<typeof signup_schema>;
 
-  // ── Form model ──────────────────────────────────────────────
   let form = $state<SignupForm>({
     username: "",
     email: "",
@@ -90,7 +88,6 @@
     age: 25,
   });
 
-  // ── Touched tracking ────────────────────────────────────────
   let touched = $state({
     username: false,
     email: false,
@@ -114,7 +111,6 @@
     touched[field] = true;
   }
 
-  // ── Field errors (derived from Zod) ─────────────────────────
   let field_errors = $derived.by(() => {
     const result = signup_schema.safeParse(form);
     const errors: Partial<Record<keyof SignupForm, string>> = {};
@@ -133,7 +129,6 @@
     return field_errors[field] ?? null;
   }
 
-  // ── Password visibility ─────────────────────────────────────
   let password_visible = $state(false);
 
   function toggle_password_visibility() {
@@ -144,7 +139,6 @@
     password_visible ? "text" : "password",
   );
 
-  // ── Country options ─────────────────────────────────────────
   const country_options: SelectOption[] = [
     { label: "Select your country", value: "" },
     { label: "Spain", value: "es" },
@@ -154,14 +148,12 @@
     { label: "Chile", value: "cl" },
   ];
 
-  // ── Interests options ───────────────────────────────────────
   const interests_options: CheckboxOption[] = [
     { label: "Sports", value: "sports" },
     { label: "Music", value: "music" },
     { label: "Technology", value: "tech" },
   ];
 
-  // ── Model entries for sidebar ───────────────────────────────
   let model_entries = $derived(
     Object.entries(form).map(([key, value]) => ({
       key,
@@ -173,13 +165,11 @@
     })),
   );
 
-  // ── Submit handler ──────────────────────────────────────────
   let is_submitting = $state(false);
 
   async function on_submit(event: Event) {
     event.preventDefault();
 
-    // Mark all fields as touched on submit attempt
     for (const key of Object.keys(touched) as (keyof SignupForm)[]) {
       touched[key] = true;
     }
@@ -191,7 +181,6 @@
     }
 
     is_submitting = true;
-    // Simulate async submission
     await new Promise((resolve) => setTimeout(resolve, 800));
     console.log("Form submitted:", result.data);
     is_submitting = false;
@@ -204,12 +193,10 @@
   </div>
 
   <div class="flex flex-col lg:flex-row gap-4">
-    <!-- Form card -->
     <div class="card bg-base-200 flex-1">
       <div class="card-body">
         <form autocomplete="off" onsubmit={on_submit}>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3 mb-6">
-            <!-- Left column -->
             <div class="flex flex-col gap-3">
               <UiField
                 label="Username"
@@ -321,7 +308,6 @@
               </UiField>
             </div>
 
-            <!-- Right column -->
             <div class="flex flex-col gap-3">
               <UiField
                 label="Repeat password"
@@ -434,7 +420,6 @@
             </div>
           </div>
 
-          <!-- Full width fields -->
           <div class="flex flex-col gap-3">
             <UiField
               label="Accept terms"
@@ -486,7 +471,6 @@
       </div>
     </div>
 
-    <!-- Reactive values sidebar -->
     <div class="w-full lg:w-80 shrink-0">
       <div class="sticky card bg-base-200 top-22">
         <div class="card-body p-4">

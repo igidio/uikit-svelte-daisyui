@@ -3,7 +3,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Collapse with checkbox (click again) -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Collapse with Checkbox (Click Again)</h2>
     <p class="text-base-content/70 mb-6">Click to toggle content. Click again to close.</p>
@@ -14,7 +13,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Collapse with close on click outside -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Collapse with Close on Click Outside</h2>
     <p class="text-base-content/70 mb-6">Click to toggle content. Click outside to close.</p>
@@ -25,7 +23,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Without border and background color -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Without Border and Background</h2>
     <p class="text-base-content/70 mb-6">
@@ -38,7 +35,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With arrow icon -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With Arrow Icon</h2>
     <p class="text-base-content/70 mb-6">Default icon style showing an arrow indicator.</p>
@@ -54,7 +50,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- With plus/minus icon -->
   <div>
     <h2 class="text-2xl font-bold mb-2">With Plus/Minus Icon</h2>
     <p class="text-base-content/70 mb-6">Alternative icon style showing a plus/minus indicator.</p>
@@ -70,7 +65,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Icon at start position -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Icon at Start Position</h2>
     <p class="text-base-content/70 mb-6">

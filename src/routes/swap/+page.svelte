@@ -10,7 +10,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Default Swap (Text) -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Default Swap (Text)</h2>
     <p class="text-base-content/70 mb-6">
@@ -27,7 +26,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Swap Icons -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Swap Icons</h2>
     <p class="text-base-content/70 mb-6">Swap between sun and moon icons.</p>
@@ -46,7 +44,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Swap with Rotate Effect -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Swap with Rotate Effect</h2>
     <p class="text-base-content/70 mb-6">Icons swap with a rotate animation.</p>
@@ -65,7 +62,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Hamburger Button -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Hamburger Button</h2>
     <p class="text-base-content/70 mb-6">Classic hamburger menu icon with rotate effect.</p>
@@ -84,7 +80,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Swap with Flip Effect -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Swap with Flip Effect</h2>
     <p class="text-base-content/70 mb-6">Emoji swap with a flip animation.</p>

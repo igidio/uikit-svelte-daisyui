@@ -31,7 +31,6 @@
     }
   });
 
-  // Sync page changes to URL
   let previous_page = $state(0);
   $effect(() => {
     if (!use_params || !initialized) return;

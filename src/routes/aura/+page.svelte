@@ -6,7 +6,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Aura -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Basic Aura</h2>
     <p class="text-base-content/70 mb-6">Default aura effect wrapping a button.</p>
@@ -19,7 +18,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Aura Types -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Types</h2>
     <p class="text-base-content/70 mb-6">
@@ -49,7 +47,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Sizes -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Sizes</h2>
     <p class="text-base-content/70 mb-6">Aura available in xs, sm, md, lg, and xl sizes.</p>
@@ -74,7 +71,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Aura with Badge -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Aura with Badge</h2>
     <p class="text-base-content/70 mb-6">Aura wrapping a badge component.</p>
@@ -93,7 +89,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Aura with Alert -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Aura with Alert</h2>
     <p class="text-base-content/70 mb-6">Aura wrapping alert components for extra emphasis.</p>
@@ -109,7 +104,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Custom Class -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Custom Class</h2>
     <p class="text-base-content/70 mb-6">

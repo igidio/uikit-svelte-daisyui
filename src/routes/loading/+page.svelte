@@ -3,7 +3,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Loading -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Basic Loading</h2>
     <p class="text-base-content/70 mb-6">Default loading spinner.</p>
@@ -14,7 +13,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Types -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Types</h2>
     <p class="text-base-content/70 mb-6">Loading animations available in different styles.</p>
@@ -48,7 +46,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Sizes -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Sizes</h2>
     <p class="text-base-content/70 mb-6">Loading available in xs, sm, md, lg, and xl sizes.</p>
@@ -78,7 +75,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Colors -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Colors</h2>
     <p class="text-base-content/70 mb-6">Loading indicators can use daisyUI semantic colors.</p>
@@ -124,7 +120,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Combined -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Combined</h2>
     <p class="text-base-content/70 mb-6">Mix type, size, and color together.</p>

@@ -3,7 +3,6 @@
 </script>
 
 <section class="space-y-12">
-	<!-- Basic Alert -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">Basic Alert</h2>
 		<p class="text-base-content/70 mb-6">Default alert with info variant.</p>
@@ -14,7 +13,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- Variants -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">Variants (Colors)</h2>
 		<p class="text-base-content/70 mb-6">Alerts come in all daisyUI semantic colors.</p>
@@ -29,7 +27,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- Type: Soft -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">Soft Style</h2>
 		<p class="text-base-content/70 mb-6">
@@ -45,7 +42,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- Type: Outline -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">Outline Style</h2>
 		<p class="text-base-content/70 mb-6">
@@ -61,7 +57,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- Type: Dash -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">Dash Style</h2>
 		<p class="text-base-content/70 mb-6">
@@ -77,7 +72,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- With Icon -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">With Icon</h2>
 		<p class="text-base-content/70 mb-6">Alerts can display an icon before the text.</p>
@@ -91,7 +85,6 @@
 
 	<hr class="border-base-300" />
 
-	<!-- Complex Content (slot) -->
 	<div>
 		<h2 class="text-2xl font-bold mb-2">Complex Content</h2>
 		<p class="text-base-content/70 mb-6">

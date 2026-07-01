@@ -57,7 +57,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Timeline -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Timeline</h2>
     <p class="text-base-content/70 mb-6">Default horizontal timeline with text on both sides.</p>
@@ -68,7 +67,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Timeline with Dated Items -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Timeline with Dates</h2>
     <p class="text-base-content/70 mb-6">
@@ -81,7 +79,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Timeline with Colorful Lines -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Colorful Lines</h2>
     <p class="text-base-content/70 mb-6">
@@ -94,7 +91,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Vertical Timeline with Custom Icons -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Vertical Timeline with Icons</h2>
     <p class="text-base-content/70 mb-6">
@@ -107,7 +103,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Timeline with Description -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Timeline with Descriptions</h2>
     <p class="text-base-content/70 mb-6">

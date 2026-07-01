@@ -169,7 +169,6 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Loading -->
         {#if show_loading()}
           <tr>
             <td
@@ -183,7 +182,6 @@
               </div>
             </td>
           </tr>
-        <!-- Empty -->
         {:else if show_empty()}
           <tr>
             <td
@@ -198,7 +196,6 @@
             </td>
           </tr>
         {:else}
-          <!-- Data rows -->
           {#each content!.data as row, row_idx}
             <tr class="border-b border-base-200 {row_classes(row_idx)}">
               {#if expandable}
@@ -228,7 +225,6 @@
                 </td>
               {/each}
             </tr>
-            <!-- Expandable row -->
             {#if expandable && is_expanded(row_idx)}
               <tr class="bg-base-200">
                 <td></td>

@@ -4,7 +4,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Default Tabs -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Default Tabs</h2>
     <p class="text-base-content/70 mb-6">
@@ -27,7 +26,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Styles -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Styles</h2>
     <p class="text-base-content/70 mb-6">
@@ -82,7 +80,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Sizes -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Sizes</h2>
     <p class="text-base-content/70 mb-6">
@@ -141,7 +138,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Content on Top -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Content on Top</h2>
     <p class="text-base-content/70 mb-6">
@@ -164,7 +160,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Custom Content -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Custom Content</h2>
     <p class="text-base-content/70 mb-6">

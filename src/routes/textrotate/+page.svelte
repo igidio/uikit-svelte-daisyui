@@ -4,7 +4,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Text Rotate -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Text Rotate</h2>
     <p class="text-base-content/70 mb-6">Rotates through 3 words by default in 10 seconds.</p>
@@ -21,7 +20,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Rotating 6 words -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Rotating 6 Words</h2>
     <p class="text-base-content/70 mb-6">Big font size, horizontally centered.</p>
@@ -41,7 +39,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Rotating words in a sentence -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Rotating Words in a Sentence</h2>
     <p class="text-base-content/70 mb-6">

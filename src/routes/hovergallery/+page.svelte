@@ -16,7 +16,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Hover Gallery -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Basic Hover Gallery</h2>
     <p class="text-base-content/70 mb-6">
@@ -31,7 +30,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Hover Gallery with 3 images -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Three Images</h2>
     <p class="text-base-content/70 mb-6">
@@ -46,7 +44,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Hover Gallery in a Card -->
   <div>
     <h2 class="text-2xl font-bold mb-2">In a Card</h2>
     <p class="text-base-content/70 mb-6">
@@ -68,7 +65,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Custom size container -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Custom Container Size</h2>
     <p class="text-base-content/70 mb-6">

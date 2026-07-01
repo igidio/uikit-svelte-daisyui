@@ -39,7 +39,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Steps (horizontal by default) -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Steps</h2>
     <p class="text-base-content/70 mb-6">Default horizontal steps with sequential numbering.</p>
@@ -50,7 +49,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Horizontal Steps -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Horizontal Steps</h2>
     <p class="text-base-content/70 mb-6">
@@ -63,7 +61,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Steps with Custom Colors -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Custom Colors</h2>
     <p class="text-base-content/70 mb-6">
@@ -76,7 +73,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Steps with Icons -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Steps with Icons</h2>
     <p class="text-base-content/70 mb-6">
@@ -89,7 +85,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Mixed: Colors + Icons -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Colorful Steps with Icons</h2>
     <p class="text-base-content/70 mb-6">

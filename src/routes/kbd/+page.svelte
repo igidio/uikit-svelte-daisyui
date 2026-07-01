@@ -3,7 +3,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Kbd -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Basic Kbd</h2>
     <p class="text-base-content/70 mb-6">Default keyboard key display.</p>
@@ -14,7 +13,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Kbd Sizes -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Kbd Sizes</h2>
     <p class="text-base-content/70 mb-6">Available in xs, sm, md, lg, and xl sizes.</p>
@@ -29,7 +27,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- In text -->
   <div>
     <h2 class="text-2xl font-bold mb-2">In text</h2>
     <p class="text-base-content/70 mb-6">Keyboard keys inline with text.</p>
@@ -38,7 +35,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Key combination -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Key Combination</h2>
     <p class="text-base-content/70 mb-6">Multiple keys shown together.</p>
@@ -53,7 +49,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Function Keys -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Function Keys</h2>
     <p class="text-base-content/70 mb-6">Special modifier keys displayed as kbd.</p>
@@ -67,7 +62,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Arrow Keys -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Arrow Keys</h2>
     <p class="text-base-content/70 mb-6">Directional keys laid out in their natural position.</p>

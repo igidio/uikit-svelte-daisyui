@@ -24,7 +24,6 @@
 </script>
 
 <section class="space-y-12">
-  <!-- Basic Breadcrumbs -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Breadcrumbs</h2>
     <p class="text-base-content/70 mb-6">
@@ -35,7 +34,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Breadcrumbs with Icons -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Breadcrumbs with Icons</h2>
     <p class="text-base-content/70 mb-6">
@@ -46,7 +44,6 @@
 
   <hr class="border-base-300" />
 
-  <!-- Mixed Breadcrumbs -->
   <div>
     <h2 class="text-2xl font-bold mb-2">Mixed Breadcrumbs</h2>
     <p class="text-base-content/70 mb-6">
